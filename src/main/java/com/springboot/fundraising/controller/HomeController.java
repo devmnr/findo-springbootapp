@@ -26,17 +26,16 @@ public class HomeController {
 		return "home";
 	}
 	
-	@GetMapping("/login")
-	public ModelAndView login() {
-	   ModelAndView mv=new ModelAndView("login");
-	   return mv;
-	}
-	
-//	@RequestMapping("/login")
-//	public String login() {
-//		
-//		return "login";
+//	@GetMapping("/login")
+//	public ModelAndView login() {
+//	   ModelAndView mv=new ModelAndView("login");
+//	   return mv;
 //	}
+	
+	@RequestMapping("/login")
+	public String login() {		
+		return "/src/main/resources/templates/login.jsp";
+	}
 	
 	@RequestMapping("/register")
 	public String register() {
